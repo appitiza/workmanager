@@ -1,6 +1,6 @@
-# "Moderno" a serverless android application using Kotlin and firestore
+# "WorkManager" a serverless android application using Kotlin and firestore
 
-Moderno is a server less android application where data is saved in firestore.We will be creating a cloud funtion to send push notification.You can use this application as a reference for implementing Frestore.
+WorkManager is a server less android application where data is saved in firestore.We will be creating a cloud funtion to send push notification.You can use this application as a reference for implementing Frestore.
 
 ## Prerequisite
 To continue,you need some basic idea about Kotlin and Firestore.
