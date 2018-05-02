@@ -140,7 +140,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".ui.activities.admin.ProfileActivity"></activity>
+        <activity android:name=".ui.activities.admin.ProfileActivity" />
+        <activity android:name=".ui.activities.UserListActivity"></activity>
     </application>
 
 </manifest>
