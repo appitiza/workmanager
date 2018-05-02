@@ -86,6 +86,9 @@ class RegisterActivity : BaseActivity() {
                             map[Constants.USER_IMEI] = device_id
                             map[Constants.USER_SALARY] = "0"
                             map[Constants.USER_TYPE] = "user"
+                            map[Constants.USER_IMAGE] = "default"
+                            map[Constants.USER_THUMB] = "default"
+                            map[Constants.USER_STATUS] = "HI! Iam using Work Manager"
                             map[Constants.USER_REG_TIME] = FieldValue.serverTimestamp()
 
 

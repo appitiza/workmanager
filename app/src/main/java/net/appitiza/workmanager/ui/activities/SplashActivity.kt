@@ -30,6 +30,9 @@ class SplashActivity : AppCompatActivity() {
     private var userpassword by PreferenceHelper(Constants.PREF_KEY_IS_USER_PASSWORD, "")
     private var usertype by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_TYPE, "")
     private var userimei by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_IMEI, "")
+    private var userimage by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_IMAGE, "")
+    private var userthumb by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_THUMB, "")
+    private var userstatus by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_STATUS, "")
     private var salary by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_SALARY, 0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,6 +100,9 @@ class SplashActivity : AppCompatActivity() {
                                     userpassword = password
                                     usertype = document.data[Constants.USER_TYPE].toString()
                                     userimei = document.data[Constants.USER_IMEI].toString()
+                                    userimage = document.data[Constants.USER_IMAGE].toString()
+                                    userthumb = document.data[Constants.USER_THUMB].toString()
+                                    userstatus = document.data[Constants.USER_STATUS].toString()
                                     salary = document.data[Constants.USER_SALARY].toString().toInt()
                                     if (usertype =="user") {
                                         val intent = Intent(this@SplashActivity, UsersActivity::class.java)

@@ -198,4 +198,6 @@
     <string name="would_you_like_to_change">Woulld you like to change imei from %1$s to  %2$s of user  %3$s</string>
     <string name="checkin_details_edited">Checkin Information Edited</string>
     <string name="admin_profile">Profile</string>
+    <string name="update_profile">Update</string>
+    <string name="no_data_available">No Data Available</string>
 </resources>

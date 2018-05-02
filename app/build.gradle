@@ -84,5 +84,11 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-auth:3.2.2'
     // FirebaseUI for Cloud Storage
     implementation 'com.firebaseui:firebase-ui-storage:3.2.2'
+
+    //crop
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+
 }
 apply plugin: 'com.google.gms.google-services'

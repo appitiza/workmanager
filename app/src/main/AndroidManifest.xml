@@ -129,7 +129,6 @@
             android:theme="@style/MainMaterialTheme.Base.user"
             android:windowSoftInputMode="stateHidden" />
 
-
         <service android:name=".ui.activities.services.NotificationService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -141,7 +140,7 @@
             </intent-filter>
         </service>
 
-
+        <activity android:name=".ui.activities.admin.ProfileActivity"></activity>
     </application>
 
 </manifest>

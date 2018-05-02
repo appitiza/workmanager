@@ -113,7 +113,13 @@ class AdminActivity : AppCompatActivity() {
         val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this@AdminActivity, p1)
         startActivity(intent, options.toBundle())
     }
+    fun loadProfile() {
 
+        val intent = Intent(this@AdminActivity, ProfileActivity::class.java)
+        val p1 = Pair(tv_admin_home_change_device_resquests as View, getString(R.string.txt_adminhome_device_change_request))
+        val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this@AdminActivity, p1)
+        startActivity(intent, options.toBundle())
+    }
     private fun updateFcm() {
         val deviceToken: String? = FirebaseInstanceId.getInstance().token
         val map = HashMap<String, Any>()
