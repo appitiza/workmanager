@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "52803899202",
+    "firebase_url": "https://githubapps.firebaseio.com",
+    "project_id": "githubapps",
+    "storage_bucket": "githubapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52803899202:android:1b8249d2afe1bad1",
+        "android_client_info": {
+          "package_name": "net.appitiza.workmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52803899202-8pnruqni6qj6cnk0fm9h2qv0psd3piv3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.appitiza.workmanager",
+            "certificate_hash": "c407604c624f6d040941e8e02ec062a5d82fd248"
+          }
+        },
+        {
+          "client_id": "52803899202-e62u5p0spklbjv42tl2isss20r7vvuef.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.appitiza.workmanager",
+            "certificate_hash": "c89eda324927bec9258bdb2da85704cf2afcba1f"
+          }
+        },
+        {
+          "client_id": "52803899202-rqvcpckntcf74n2vhkbbu4g0f8rvfojq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMKFd3XPl_3zsYilTaqxVlyBDhoLhFdZo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52803899202-rqvcpckntcf74n2vhkbbu4g0f8rvfojq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

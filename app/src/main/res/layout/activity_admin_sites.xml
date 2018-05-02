@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:transitionName="@string/transition_adminhome_sites">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/admin_top_bg">
+        <include layout="@layout/top_layout" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:background="@drawable/admin_container_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/default_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/sites"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:transitionName="@string/txt_adminhome_sites"
+            android:textSize="@dimen/text_size_large" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/quad_margin"
+            android:background="@color/admin_home_btn_strock" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/semi_padding"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/tv_admin_site_all"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="@string/all"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:padding="@dimen/quad_padding"
+                android:textSize="@dimen/text_size_medium" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/quad_margin"
+                android:background="@color/admin_home_btn_strock" />
+
+            <TextView
+                android:id="@+id/tv_admin_site_undergoing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="@string/undergoing"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:padding="@dimen/quad_padding"
+                android:textSize="@dimen/text_size_medium" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/quad_margin"
+                android:background="@color/admin_home_btn_strock" />
+
+            <TextView
+                android:id="@+id/tv_admin_site_completed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="@string/completed"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:padding="@dimen/quad_padding"
+                android:textSize="@dimen/text_size_medium" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/admin_home_btn_strock" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/semi_padding">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_admin_site_all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"/>
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_admin_add_site"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/admin_fab_btn_bg"
+                android:src="@drawable/add"
+                android:layout_gravity="bottom|right"
+                android:padding="@dimen/default_padding"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

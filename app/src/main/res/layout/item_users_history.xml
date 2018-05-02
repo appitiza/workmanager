@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_site_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/semi_margin"
+        android:orientation="horizontal"
+        android:padding="@dimen/semi_padding"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/tv_historyitem_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_vertical|left"
+            android:text="@string/date"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small" />
+
+
+        <TextView
+            android:id="@+id/tv_historyitem_site"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight=".9"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/work_site"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small" />
+
+
+        <TextView
+            android:id="@+id/tv_historyitem_hours"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight=".9"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/hours"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small" />
+
+
+        <TextView
+            android:id="@+id/tv_historyitem_payment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/roboto"
+            android:gravity="center_vertical|right"
+            android:text="@string/payment"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/semi_margin"
+        android:background="@color/users_home_btn_strock" />
+</LinearLayout>

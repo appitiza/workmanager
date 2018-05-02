@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+
+    <color name="colorPrimary_login">#1f6076</color>
+    <color name="colorPrimaryDark_login">#2d5074</color>
+    <color name="colorAccent_login">#2d5074</color>
+    <color name="text_color_login">#2d5074</color>
+    <color name="line_login">#CC74c8cf</color>
+
+
+    <color name="colorPrimary_admin">#af405d</color>
+    <color name="colorPrimaryDark_admin">#772f3f</color>
+    <color name="colorAccent_admin">#772f3f</color>
+    <color name="text_color_admin">#772f3f</color>
+    <color name="line_admin">#CCc76387</color>
+
+    <color name="colorPrimary_user">#028f6b</color>
+    <color name="colorPrimaryDark_user">#006252</color>
+    <color name="colorAccent_user">#006252</color>
+    <color name="text_color_user">#ffffff</color>
+    <color name="line_user">#CC02ba8b</color>
+
+
+    <color name="start_login_top_bg" >#467bb0</color>
+    <color name="end_login_top_bg" >#195c6c</color>
+    <color name="centre_login_top_bg" >#356f96</color>
+
+    <color name="centre_login_container_bg">#306c76</color>
+    <color name="start_login_container_bg" >#1b5e55</color>
+    <color name="end_login_container_bg" >#4c7e9e</color>
+
+    <color name="centre_admin_top_bg" >#aa3e5b</color>
+    <color name="start_admin_top_bg" >#b74760</color>
+    <color name="end_admin_top_bg" >#932e51</color>
+
+    <color name="centre_admin_container_bg">#8b395f</color>
+    <color name="start_admin_container_bg" >#b75a73</color>
+    <color name="end_admin_container_bg" >#621c50</color>
+
+    <color name="centre_users_container_bg" >#027b2f</color>
+    <color name="end_users_container_bg" >#0d9b70</color>
+    <color name="start_users_container_bg" >#206901</color>
+
+    <color name="centre_users_top_bg" >#027e4c</color>
+    <color name="start_users_top_bg" >#029c87</color>
+    <color name="end_users_top_bg" >#026926</color>
+    <color name="admin_home_btn_solid" >#1A000000</color>
+    <color name="users_home_btn_solid" >#1A000000</color>
+    <color name="admin_home_btn_strock" >#CCce6497</color>
+    <color name="users_home_btn_strock" >#CC1cc98e</color>
+    <color name="text_clicked" >#DCDCDC</color>
+
+</resources>

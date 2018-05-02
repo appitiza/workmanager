@@ -1,0 +1,182 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:transitionName="@string/transition_login_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="35"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/users_top_bg"
+        android:padding="@dimen/default_padding">
+        <include layout="@layout/top_layout" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="65"
+        android:background="@drawable/users_container_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/double_margin">
+
+            <LinearLayout
+                android:id="@+id/ll_users_home_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/users_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/default_margin">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/report"
+                    android:padding="@dimen/default_padding"
+                    android:contentDescription="@string/app_name" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/semi_margin"
+                    android:layout_marginStart="@dimen/semi_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_users_home_reports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="@string/users_report"
+                    android:textAllCaps="true"
+                    android:transitionName="@string/transition_usershome_wrkreport"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_users_home_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/users_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/history"
+                    android:padding="@dimen/default_padding"
+                    android:contentDescription="@string/app_name" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/semi_margin"
+                    android:layout_marginStart="@dimen/semi_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_users_home_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="@string/users_history"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/transition_usershome_history"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_users_home_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/users_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/notification"
+                    android:padding="@dimen/default_padding"
+                    android:contentDescription="@string/app_name" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/semi_margin"
+                    android:layout_marginStart="@dimen/semi_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_users_home_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="@string/users_notification"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/txt_usershome_notification" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_users_home_change_device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/users_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/report"
+                    android:padding="@dimen/default_padding"
+                    android:contentDescription="@string/app_name" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/semi_margin"
+                    android:layout_marginStart="@dimen/semi_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_users_home__change_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="@string/users_change_device"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/transition_usershome_device_change" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
