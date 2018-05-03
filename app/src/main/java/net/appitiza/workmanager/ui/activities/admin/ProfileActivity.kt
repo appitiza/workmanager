@@ -13,6 +13,8 @@ import net.appitiza.workmanager.R.id.*
 import net.appitiza.workmanager.constants.Constants
 import net.appitiza.workmanager.ui.activities.BaseActivity
 import net.appitiza.workmanager.utils.PreferenceHelper
+import android.content.Intent
+import com.theartofdev.edmodo.cropper.CropImage
 
 
 class ProfileActivity : BaseActivity() {
@@ -33,11 +35,25 @@ class ProfileActivity : BaseActivity() {
     private var userthumb by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_THUMB, "")
     private var userstatus by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_STATUS, "")
     private var salary by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_SALARY, 0)
+
+    private val GALLERY_PICK = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
         initialize()
         getUserData()
+        setClick()
+    }
+
+    private fun setClick() {
+        iv_userprofile_image.setOnClickListener { openFile() }
+    }
+
+    private fun openFile() {
+        val galleryIntent = Intent()
+        galleryIntent.type = "image/*"
+        galleryIntent.action = Intent.ACTION_GET_CONTENT
+        startActivityForResult(Intent.createChooser(galleryIntent, "Chat It"), GALLERY_PICK)
     }
 
     private fun initialize() {
@@ -48,13 +64,17 @@ class ProfileActivity : BaseActivity() {
     }
 
     private fun getUserData() {
-       /* if (userimage != "default") {
+        if (userimage != "default") {
             val requestOptions = RequestOptions()
             requestOptions.placeholder(R.drawable.no_image)
             requestOptions.error(R.drawable.no_image)
             requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL)
             Glide.with(applicationContext).load(userimage).apply(requestOptions).into(iv_userprofile_image)
-        }*/
+        }
+        tv_profile_displayname.text = displayName
+        tv_profile_email.text = useremail
+        tv_profile_status.text = userstatus
+
 
     }
 
@@ -64,6 +84,19 @@ class ProfileActivity : BaseActivity() {
             false
         } else {
             true
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == GALLERY_PICK && resultCode == RESULT_OK) {
+            CropImage.activity(data?.data).setAspectRatio(1, 1).start(this);
+        }
+        else if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            val result = CropImage.getActivityResult(data)
+            if (resultCode == RESULT_OK) {
+
+            }
         }
     }
 }
