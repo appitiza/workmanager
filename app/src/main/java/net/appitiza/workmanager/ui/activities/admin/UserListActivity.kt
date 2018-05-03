@@ -44,7 +44,7 @@ class UserListActivity : BaseActivity(), ChatUserClick {
 
         rv_user_list.layoutManager = LinearLayoutManager(this)
         mUserList = arrayListOf()
-        userAdapter = ChatUserAdapter(mUserList, this)
+        userAdapter = ChatUserAdapter(mUserList, this,this)
         rv_user_list.adapter = userAdapter
         mProgress = ProgressDialog(this)
         mAuth = FirebaseAuth.getInstance()

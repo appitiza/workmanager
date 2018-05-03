@@ -177,6 +177,80 @@
                     android:textColor="@color/white"
                     android:transitionName="@string/transition_usershome_device_change" />
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_users_home_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/users_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/chat"
+                    android:padding="@dimen/default_padding"
+                    android:contentDescription="@string/app_name" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/semi_margin"
+                    android:layout_marginStart="@dimen/semi_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_users_home_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="@string/chat"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/transition_usershome_device_change" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_users_home_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/users_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/user"
+                    android:padding="@dimen/default_padding"
+                    android:contentDescription="@string/app_name" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/semi_margin"
+                    android:layout_marginStart="@dimen/semi_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_users_home_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="@string/admin_profile"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/transition_usershome_device_change" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

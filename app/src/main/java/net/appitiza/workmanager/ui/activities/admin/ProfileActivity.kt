@@ -96,6 +96,8 @@ class ProfileActivity : BaseActivity() {
             val result = CropImage.getActivityResult(data)
             if (resultCode == RESULT_OK) {
 
+                val uri = result.uri
+                iv_userprofile_image.setImageURI(uri)
             }
         }
     }
