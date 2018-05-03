@@ -32,6 +32,7 @@ class Constants {
         const val USER_IMAGE = "image"
         const val USER_THUMB = "thumb"
         const val USER_STATUS = "status"
+        const val USER_LASTSEEN = "seen"
         const val USER_REG_TIME = "time"
         const val SITE_NAME = "site_name"
         const val SITE_TYPE = "site_type"

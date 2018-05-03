@@ -141,7 +141,8 @@
         </service>
 
         <activity android:name=".ui.activities.admin.ProfileActivity" />
-        <activity android:name=".ui.activities.UserListActivity"></activity>
+        <activity android:name=".ui.activities.UserListActivity" />
+        <activity android:name=".ui.activities.admin.UserListActivity"></activity>
     </application>
 
 </manifest>

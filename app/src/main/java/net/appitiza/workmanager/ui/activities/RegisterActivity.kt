@@ -89,6 +89,7 @@ class RegisterActivity : BaseActivity() {
                             map[Constants.USER_IMAGE] = "default"
                             map[Constants.USER_THUMB] = "default"
                             map[Constants.USER_STATUS] = "HI! Iam using Work Manager"
+                            map[Constants.USER_LASTSEEN] = FieldValue.serverTimestamp()
                             map[Constants.USER_REG_TIME] = FieldValue.serverTimestamp()
 
 

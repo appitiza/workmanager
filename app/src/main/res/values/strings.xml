@@ -200,4 +200,5 @@
     <string name="admin_profile">Profile</string>
     <string name="update_profile">Update</string>
     <string name="no_data_available">No Data Available</string>
+    <string name="users">Users</string>
 </resources>

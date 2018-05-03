@@ -47,6 +47,8 @@ class AdminActivity : AppCompatActivity() {
         ll_admin_home_site_device.setOnClickListener { loadDeviceReset() }
         ll_admin_home_site_salary.setOnClickListener { loadSetsalary() }
         ll_admin_home_change_device_resquests.setOnClickListener { loadDeviceChangeRequests() }
+        ll_admin_home_site_chat.setOnClickListener { loadChatUser() }
+        ll_admin_home_profile.setOnClickListener { loadProfile() }
 
     }
 
@@ -113,13 +115,23 @@ class AdminActivity : AppCompatActivity() {
         val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this@AdminActivity, p1)
         startActivity(intent, options.toBundle())
     }
+
     fun loadProfile() {
 
         val intent = Intent(this@AdminActivity, ProfileActivity::class.java)
-        val p1 = Pair(tv_admin_home_change_device_resquests as View, getString(R.string.txt_adminhome_device_change_request))
+        val p1 = Pair(tv_admin_home_profile as View, getString(R.string.txt_adminhome_device_change_request))
         val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this@AdminActivity, p1)
         startActivity(intent, options.toBundle())
     }
+
+    fun loadChatUser() {
+
+        val intent = Intent(this@AdminActivity, UserListActivity::class.java)
+        val p1 = Pair(tv_admin_home_site_chat as View, getString(R.string.txt_adminhome_device_change_request))
+        val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this@AdminActivity, p1)
+        startActivity(intent, options.toBundle())
+    }
+
     private fun updateFcm() {
         val deviceToken: String? = FirebaseInstanceId.getInstance().token
         val map = HashMap<String, Any>()
@@ -155,6 +167,6 @@ class AdminActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-             showExitWarning()
+        showExitWarning()
     }
 }

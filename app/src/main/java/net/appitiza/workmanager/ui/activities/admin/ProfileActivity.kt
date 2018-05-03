@@ -9,7 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_profile.*
 import net.appitiza.workmanager.R
-import net.appitiza.workmanager.R.id.tv_userprofile_displayname
+import net.appitiza.workmanager.R.id.*
 import net.appitiza.workmanager.constants.Constants
 import net.appitiza.workmanager.ui.activities.BaseActivity
 import net.appitiza.workmanager.utils.PreferenceHelper
@@ -48,16 +48,14 @@ class ProfileActivity : BaseActivity() {
     }
 
     private fun getUserData() {
-        if (userimage != "default") {
+       /* if (userimage != "default") {
             val requestOptions = RequestOptions()
             requestOptions.placeholder(R.drawable.no_image)
             requestOptions.error(R.drawable.no_image)
             requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL)
             Glide.with(applicationContext).load(userimage).apply(requestOptions).into(iv_userprofile_image)
-        }
-        tv_profile_displayname.text = displayName
-        tv_profile_email.text = useremail
-        tv_profile_status.text = userstatus
+        }*/
+
     }
 
     private fun validation(email: String): Boolean {
