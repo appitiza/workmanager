@@ -47,13 +47,14 @@ class ChatUserAdapter(private val mList: ArrayList<UserListdata>, private val ca
             itemView.tv_item_user_status.text = data.status
             itemView.tv_item_user_seen.text =  Utils.convertDate(data.time, "dd MMM yyyy")
 
-            if (data.thumb != "default") {
+
                 val requestOptions = RequestOptions()
-                requestOptions.placeholder(R.drawable.no_image)
-                requestOptions.error(R.drawable.no_image)
+                requestOptions.placeholder(R.drawable.default_image_small)
+                requestOptions.error(R.drawable.default_image_small)
                 requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL)
+                requestOptions.circleCrop()
                 Glide.with(context).load(data.thumb).apply(requestOptions).into(itemView.iv_item_user_avatar)
-            }
+
 
         }
     }

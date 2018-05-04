@@ -201,4 +201,7 @@
     <string name="update_profile">Update</string>
     <string name="no_data_available">No Data Available</string>
     <string name="users">Users</string>
+    <string name="profile_updated">Profile Updated</string>
+    <string name="profile_updating">Profile Updating</string>
+    <string name="image_uploading">Image Uploading</string>
 </resources>

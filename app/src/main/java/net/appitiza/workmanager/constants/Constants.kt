@@ -66,6 +66,8 @@ class Constants {
         const val DEVICE_CHANGE_REQUEST_NAME = "name"
         const val DEVICE_CHANGE_REQUEST_STATUS = "status"
         const val DEVICE_CHANGE_REQUEST_TIME = "time"
+        const val STORAGE_PROFILE = "profile"
+        const val STORAGE_THUMB = "thumb"
 
 
     }

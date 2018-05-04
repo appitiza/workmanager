@@ -26,6 +26,8 @@ import net.appitiza.workmanager.R
 import net.appitiza.workmanager.constants.Constants
 import net.appitiza.workmanager.ui.activities.BaseActivity
 import net.appitiza.workmanager.ui.activities.StartUpActivity
+import net.appitiza.workmanager.ui.activities.admin.ProfileActivity
+import net.appitiza.workmanager.ui.activities.admin.UserListActivity
 import net.appitiza.workmanager.utils.PreferenceHelper
 import java.util.*
 
@@ -73,6 +75,8 @@ class UsersActivity : BaseActivity() {
         ll_users_home_history.setOnClickListener { loadHistory() }
         ll_users_home_notification.setOnClickListener { loadNotification() }
         ll_users_home_change_device.setOnClickListener { loadDeviceChangeRequest() }
+        ll_users_home_chat.setOnClickListener { loadChatUser() }
+        ll_users_home_profile.setOnClickListener { loadProfile() }
     }
 
 
@@ -140,6 +144,20 @@ class UsersActivity : BaseActivity() {
     }
     private fun loadDeviceChangeRequest() {
         val intent = Intent(this@UsersActivity, DeviceChangeRequestActivity::class.java)
+
+        val p1 = Pair(tv_users_home_notification as View, getString(R.string.txt_usershome_device_change))
+        val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this@UsersActivity, p1)
+        startActivity(intent, options.toBundle())
+    }
+    private fun loadChatUser() {
+        val intent = Intent(this@UsersActivity, UserListActivity::class.java)
+
+        val p1 = Pair(tv_users_home_notification as View, getString(R.string.txt_usershome_device_change))
+        val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this@UsersActivity, p1)
+        startActivity(intent, options.toBundle())
+    }
+    private fun loadProfile() {
+        val intent = Intent(this@UsersActivity, ProfileActivity::class.java)
 
         val p1 = Pair(tv_users_home_notification as View, getString(R.string.txt_usershome_device_change))
         val options = ActivityOptionsCompat.makeSceneTransitionAnimation(this@UsersActivity, p1)

@@ -16,6 +16,8 @@ import android.util.Log
 import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreException
+import com.google.firebase.firestore.QuerySnapshot
 import kotlinx.android.synthetic.main.activity_admin_sites.*
 import net.appitiza.workmanager.BuildConfig
 import net.appitiza.workmanager.R

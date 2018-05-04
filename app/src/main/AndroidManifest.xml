@@ -144,7 +144,8 @@
 
         <activity android:name=".ui.activities.admin.ProfileActivity" />
         <activity android:name=".ui.activities.admin.UserListActivity"/>
-
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.provider"

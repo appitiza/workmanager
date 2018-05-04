@@ -4,12 +4,12 @@ import android.app.ProgressDialog
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FieldValue
-import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.*
 import kotlinx.android.synthetic.main.activity_usel_list.*
 import net.appitiza.workmanager.R
 import net.appitiza.workmanager.adapter.ChatUserAdapter
 import net.appitiza.workmanager.constants.Constants
+import net.appitiza.workmanager.model.NotificationData
 import net.appitiza.workmanager.model.UserListdata
 import net.appitiza.workmanager.ui.activities.BaseActivity
 import net.appitiza.workmanager.ui.activities.interfaces.ChatUserClick
@@ -58,7 +58,7 @@ class UserListActivity : BaseActivity(), ChatUserClick {
         mProgress?.setCancelable(false)
         mProgress?.show()
 
-        db.collection(Constants.COLLECTION_USER)
+     /*   db.collection(Constants.COLLECTION_USER)
                 .get()
                 .addOnCompleteListener { fetchall_task ->
                     mProgress?.dismiss()
@@ -91,8 +91,34 @@ class UserListActivity : BaseActivity(), ChatUserClick {
                     } else {
                         Utils.showDialog(this, fetchall_task.exception?.message.toString())
                     }
-                }
+                }*/
 
+        db.collection(Constants.COLLECTION_USER)
+                .orderBy(Constants.USER_DISPLAY_NAME, Query.Direction.ASCENDING)
+                .addSnapshotListener(this,
+                        { querySnapshot: QuerySnapshot, e: FirebaseFirestoreException? ->
+
+                            mProgress?.dismiss()
+                            mUserList.clear()
+                            for (document in querySnapshot!!.documents) {
+                                val data = UserListdata()
+                                data.emailId = document.data[Constants.USER_EMAIL].toString()
+                                data.username = document.data[Constants.USER_DISPLAY_NAME].toString()
+                                data.status = document.data[Constants.USER_STATUS].toString()
+                                data.token = document.data[Constants.USER_TOKEN].toString()
+                                data.imei = document.data[Constants.USER_IMEI].toString()
+                                data.salary = document.data[Constants.USER_SALARY].toString().toInt()
+                                data.type = document.data[Constants.USER_TYPE].toString()
+                                data.image = document.data[Constants.USER_IMAGE].toString()
+                                data.thumb = document.data[Constants.USER_THUMB].toString()
+                                data.seen = Utils.getDateTimestamp(document.data[Constants.USER_LASTSEEN].toString()).time
+                                data.time = Utils.getDateTimestamp(document.data[Constants.USER_REG_TIME].toString()).time
+                                mUserList.add(data)
+
+                            }
+                            userAdapter.notifyDataSetChanged()
+                            mProgress?.dismiss()
+                        })
 
     }
 }
