@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="@dimen/semi_margin"
-        android:background="@color/admin_home_btn_strock" />
+        android:background="@color/home_btn_strock" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,7 +50,7 @@
             android:layout_width="0.5dp"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/quad_margin"
-            android:background="@color/admin_home_btn_strock" />
+            android:background="@color/home_btn_strock" />
 
         <TextView
             android:id="@+id/tv_admin_history_monthly_monthly"
@@ -73,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="@dimen/quad_margin"
-        android:background="@color/admin_home_btn_strock" />
+        android:background="@color/home_btn_strock" />
 
    <!-- <LinearLayout
         android:layout_width="match_parent"
@@ -249,7 +249,7 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="@dimen/default_margin"
-        android:background="@color/admin_home_btn_strock" />
+        android:background="@color/home_btn_strock" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -320,7 +320,7 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="@dimen/quad_margin"
-        android:background="@color/admin_home_btn_strock" />
+        android:background="@color/home_btn_strock" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_adminhistory_list"

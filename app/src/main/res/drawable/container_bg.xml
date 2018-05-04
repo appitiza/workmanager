@@ -3,9 +3,9 @@
 
     <gradient
         android:angle="135"
-        android:centerColor="@color/centre_users_container_bg"
-        android:endColor="@color/end_users_container_bg"
-        android:startColor="@color/start_users_container_bg"
+        android:centerColor="@color/centre_container_bg"
+        android:endColor="@color/end_container_bg"
+        android:startColor="@color/start_container_bg"
         android:type="linear" />
 
     <corners

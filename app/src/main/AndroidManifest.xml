@@ -23,7 +23,7 @@
         <activity
             android:name=".ui.activities.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.splash"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,37 +34,37 @@
         <activity
             android:name=".ui.activities.StartUpActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.login"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".ui.activities.RegisterActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.login"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".ui.activities.admin.AdminActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.admin.AdminSitesActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.admin.AdminWorkReportsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.admin.AdminSiteReportsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.admin.CreateSiteActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.BaseActivity"
@@ -73,62 +73,62 @@
         <activity
             android:name=".ui.activities.admin.AdminEditSiteActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.admin.NotificationActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.admin.SetSalaryActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.admin.DeviceResetActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.admin.SetTimeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.admin.DeviceChangeRequestsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.admin.EditWorkReportActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.admin"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.users.UsersActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.user"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.users.UserReportActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.user"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.users.UserNotificationsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.user"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.users.UserHistoryActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.user"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ui.activities.users.DeviceChangeRequestActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MainMaterialTheme.Base.user"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
 
         <service android:name=".ui.activities.services.NotificationService">

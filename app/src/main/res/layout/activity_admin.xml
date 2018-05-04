@@ -6,22 +6,14 @@
     android:orientation="vertical"
     android:transitionName="@string/transition_login_main">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_weight="20"
-        android:background="@drawable/admin_top_bg"
-        android:gravity="center">
 
-        <include layout="@layout/top_layout" />
-    </LinearLayout>
+        <include layout="@layout/item_toolbar" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="80"
-        android:background="@drawable/admin_container_bg">
+        android:background="@drawable/container_bg">
 
         <LinearLayout
             android:layout_width="match_parent"

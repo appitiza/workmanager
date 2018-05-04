@@ -6,22 +6,14 @@
     android:orientation="vertical"
     android:transitionName="@string/transition_adminhome_device_change_request">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@drawable/admin_top_bg">
-        <include layout="@layout/top_layout" />
-    </LinearLayout>
+    <include layout="@layout/item_toolbar" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="80"
-        android:background="@drawable/admin_container_bg"
+        android:background="@drawable/container_bg"
         android:orientation="vertical"
         android:padding="@dimen/default_margin">
 
@@ -40,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_marginTop="@dimen/quad_margin"
-            android:background="@color/admin_home_btn_strock" />
+            android:background="@color/home_btn_strock" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_device_change_list"

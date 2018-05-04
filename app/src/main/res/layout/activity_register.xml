@@ -7,20 +7,12 @@
     android:transitionName="@string/transition_login_register">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@drawable/login_top_bg">
-        <include layout="@layout/top_layout" />
-    </LinearLayout>
+    <include layout="@layout/item_toolbar" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="80"
-        android:background="@drawable/login_container_bg"
+        android:background="@drawable/container_bg"
         android:orientation="vertical"
         android:padding="@dimen/default_margin">
 
@@ -43,7 +35,7 @@
             android:background="@drawable/et_bg"
             android:inputType="text"
             android:longClickable="false"
-            android:textColor="@color/colorPrimaryDark_login"
+            android:textColor="@color/text_color"
             android:maxLength="30"
             android:maxLines="1"
             android:textSize="@dimen/text_size_medium"
@@ -67,7 +59,7 @@
             android:background="@drawable/et_bg"
             android:inputType="textEmailAddress"
             android:longClickable="false"
-            android:textColor="@color/colorPrimaryDark_login"
+            android:textColor="@color/text_color"
             android:maxLength="30"
             android:maxLines="1"
             android:padding="@dimen/threefourth_padding"
@@ -93,7 +85,7 @@
             android:background="@drawable/et_bg"
             android:inputType="textPassword"
             android:longClickable="false"
-            android:textColor="@color/colorPrimaryDark_login"
+            android:textColor="@color/text_color"
             android:maxLength="30"
             android:maxLines="1"
             android:padding="@dimen/threefourth_padding"
@@ -105,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="@dimen/default_margin"
-            android:background="@color/line_login" />
+            android:background="@color/line" />
 
         <TextView
             android:id="@+id/tv_register_register"
@@ -122,7 +114,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/line_login" />
+            android:background="@color/line" />
 
 
     </LinearLayout>

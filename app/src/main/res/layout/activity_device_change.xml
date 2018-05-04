@@ -6,22 +6,13 @@
     android:orientation="vertical"
     android:transitionName="@string/transition_usershome_device_change">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@drawable/users_top_bg">
-
-        <include layout="@layout/top_layout" />
-    </LinearLayout>
+    <include layout="@layout/item_toolbar" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="80"
-        android:background="@drawable/users_container_bg">
+        android:background="@drawable/container_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +54,7 @@
                 android:background="@drawable/et_bg"
                 android:inputType="text"
                 android:longClickable="false"
-                android:textColor="@color/colorPrimaryDark_user"
+                android:textColor="@color/text_color"
                 android:maxLength="30"
                 android:maxLines="1"
                 android:padding="@dimen/semi_padding" />
@@ -90,7 +81,7 @@
                 android:maxLength="30"
                 android:maxLines="2"
                 android:padding="@dimen/threefourth_padding"
-                android:textColor="@color/colorPrimaryDark_user"  />
+                android:textColor="@color/text_color"  />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"

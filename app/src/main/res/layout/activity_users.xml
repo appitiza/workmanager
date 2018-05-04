@@ -5,22 +5,13 @@
     android:orientation="vertical"
     android:transitionName="@string/transition_login_main">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="35"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@drawable/users_top_bg"
-        android:padding="@dimen/default_padding">
-        <include layout="@layout/top_layout" />
-    </LinearLayout>
+    <include layout="@layout/item_toolbar" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="65"
-        android:background="@drawable/users_container_bg">
+        android:background="@drawable/container_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,7 +23,7 @@
                 android:id="@+id/ll_users_home_report"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/users_home_btn_bg"
+                android:background="@drawable/home_btn_bg"
                 android:orientation="horizontal"
                 android:padding="@dimen/default_margin">
 
@@ -69,7 +60,7 @@
                 android:id="@+id/ll_users_home_history"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/users_home_btn_bg"
+                android:background="@drawable/home_btn_bg"
                 android:orientation="horizontal"
                 android:padding="@dimen/default_margin"
                 android:layout_marginTop="@dimen/default_margin">
@@ -107,7 +98,7 @@
                 android:id="@+id/ll_users_home_notification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/users_home_btn_bg"
+                android:background="@drawable/home_btn_bg"
                 android:orientation="horizontal"
                 android:padding="@dimen/default_margin"
                 android:layout_marginTop="@dimen/default_margin">
@@ -144,7 +135,7 @@
                 android:id="@+id/ll_users_home_change_device"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/users_home_btn_bg"
+                android:background="@drawable/home_btn_bg"
                 android:orientation="horizontal"
                 android:padding="@dimen/default_margin"
                 android:layout_marginTop="@dimen/default_margin">
@@ -181,7 +172,7 @@
                 android:id="@+id/ll_users_home_chat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/users_home_btn_bg"
+                android:background="@drawable/home_btn_bg"
                 android:orientation="horizontal"
                 android:padding="@dimen/default_margin"
                 android:layout_marginTop="@dimen/default_margin">
@@ -218,7 +209,7 @@
                 android:id="@+id/ll_users_home_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/users_home_btn_bg"
+                android:background="@drawable/home_btn_bg"
                 android:orientation="horizontal"
                 android:padding="@dimen/default_margin"
                 android:layout_marginTop="@dimen/default_margin">

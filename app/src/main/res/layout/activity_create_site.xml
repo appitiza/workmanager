@@ -5,21 +5,12 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@drawable/admin_top_bg">
-        <include layout="@layout/top_layout" />
-    </LinearLayout>
-
+    <include layout="@layout/item_toolbar" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="80"
-        android:background="@drawable/admin_container_bg">
+        android:background="@drawable/container_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_marginTop="@dimen/quad_margin"
-                android:background="@color/admin_home_btn_strock" />
+                android:background="@color/home_btn_strock" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -61,7 +52,7 @@
                 android:background="@drawable/et_bg"
                 android:inputType="textEmailAddress"
                 android:longClickable="false"
-                android:textColor="@color/colorPrimaryDark_admin"
+                android:textColor="@color/text_color"
                 android:maxLength="30"
                 android:maxLines="1"
                 android:textSize="@dimen/text_size_medium"
@@ -122,7 +113,7 @@
                 android:maxLength="30"
                 android:maxLines="1"
                 android:lines="1"
-                android:textColor="@color/colorPrimaryDark_admin"
+                android:textColor="@color/text_color"
                 android:textSize="@dimen/text_size_medium"
                 android:padding="@dimen/threefourth_padding" />
             <TextView
@@ -142,7 +133,7 @@
                 android:layout_marginTop="@dimen/semi_margin"
                 android:background="@drawable/et_bg"
                 android:longClickable="false"
-                android:textColor="@color/colorPrimaryDark_admin"
+                android:textColor="@color/text_color"
                 android:inputType="number"
                 android:maxLength="30"
                 android:maxLines="1"
@@ -165,7 +156,7 @@
                 android:layout_marginTop="@dimen/semi_margin"
                 android:background="@drawable/et_bg"
                 android:longClickable="false"
-                android:textColor="@color/colorPrimaryDark_admin"
+                android:textColor="@color/text_color"
                 android:inputType="number"
                 android:maxLength="30"
                 android:maxLines="1"
@@ -188,7 +179,7 @@
                 android:layout_marginTop="@dimen/semi_margin"
                 android:background="@drawable/et_bg"
                 android:longClickable="false"
-                android:textColor="@color/colorPrimaryDark_admin"
+                android:textColor="@color/text_color"
                 android:maxLength="30"
                 android:maxLines="1"
                 android:textSize="@dimen/text_size_medium"
@@ -197,7 +188,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/default_margin"
-                android:background="@color/admin_home_btn_strock" />
+                android:background="@color/home_btn_strock" />
 
             <TextView
                 android:id="@+id/tv_admin_create_create"
@@ -213,7 +204,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/admin_home_btn_strock" />
+                android:background="@color/home_btn_strock" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

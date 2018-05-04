@@ -72,5 +72,5 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="@dimen/semi_margin"
-        android:background="@color/admin_home_btn_strock" />
+        android:background="@color/home_btn_strock" />
 </LinearLayout>

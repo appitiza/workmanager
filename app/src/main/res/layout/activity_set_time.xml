@@ -6,22 +6,13 @@
     android:orientation="vertical"
     android:transitionName="@string/transition_adminhome_adjust_time">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_weight="20"
-        android:background="@drawable/admin_top_bg"
-        android:gravity="center">
-
-        <include layout="@layout/top_layout" />
-    </LinearLayout>
+    <include layout="@layout/item_toolbar" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="80"
-        android:background="@drawable/admin_container_bg">
+        android:background="@drawable/container_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_marginTop="@dimen/quad_margin"
-                android:background="@color/admin_home_btn_strock" />
+                android:background="@color/home_btn_strock" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -96,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0.6"
-                    android:background="@drawable/users_checkin_bg"
+                    android:background="@drawable/checkin_bg"
                     android:gravity="center_vertical"
                     android:padding="@dimen/threefourth_padding"
                     android:text="@string/check_in"
@@ -109,7 +100,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.4"
-                    android:background="@drawable/users_checkin_spnr_bg"
+                    android:background="@drawable/checkin_spnr_bg"
                     android:gravity="center_vertical">
 
                     <Spinner
@@ -155,7 +146,7 @@
                 android:maxLength="30"
                 android:maxLines="1"
                 android:padding="@dimen/semi_padding"
-                android:textColor="@color/colorPrimaryDark_admin" />
+                android:textColor="@color/text_color" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -170,7 +161,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0.6"
-                    android:background="@drawable/users_checkin_bg"
+                    android:background="@drawable/checkin_bg"
                     android:gravity="center_vertical"
                     android:padding="@dimen/threefourth_padding"
                     android:text="@string/check_out"
@@ -183,7 +174,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.4"
-                    android:background="@drawable/users_checkin_spnr_bg"
+                    android:background="@drawable/checkin_spnr_bg"
                     android:gravity="center_vertical">
 
                     <Spinner
@@ -229,7 +220,7 @@
                 android:maxLength="30"
                 android:maxLines="1"
                 android:padding="@dimen/semi_padding"
-                android:textColor="@color/colorPrimaryDark_admin" />
+                android:textColor="@color/text_color" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -253,13 +244,13 @@
                 android:maxLength="30"
                 android:maxLines="1"
                 android:padding="@dimen/semi_padding"
-                android:textColor="@color/colorPrimaryDark_admin" />
+                android:textColor="@color/text_color" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/default_margin"
-                android:background="@color/admin_home_btn_strock" />
+                android:background="@color/home_btn_strock" />
 
             <TextView
                 android:id="@+id/tv_admin_submit_time"
@@ -275,7 +266,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/admin_home_btn_strock" />
+                android:background="@color/home_btn_strock" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

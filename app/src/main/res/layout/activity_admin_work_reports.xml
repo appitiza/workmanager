@@ -6,21 +6,13 @@
     android:orientation="vertical"
     android:transitionName="@string/transition_adminhome_wrkreport">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:background="@drawable/admin_top_bg">
-        <include layout="@layout/top_layout" />
-    </LinearLayout>
+    <include layout="@layout/item_toolbar" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="80"
-        android:background="@drawable/admin_container_bg">
+        android:background="@drawable/container_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_marginTop="@dimen/quad_margin"
-                android:background="@color/admin_home_btn_strock" />
+                android:background="@color/home_btn_strock" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -101,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
                     android:layout_marginTop="@dimen/quad_margin"
-                    android:background="@color/admin_home_btn_strock" />
+                    android:background="@color/home_btn_strock" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -129,7 +121,7 @@
                         android:layout_width="0.5dp"
                         android:layout_height="match_parent"
                         android:layout_marginTop="@dimen/quad_margin"
-                        android:background="@color/admin_home_btn_strock" />
+                        android:background="@color/home_btn_strock" />
 
                     <TextView
                         android:id="@+id/tv_admin_history_monthly"
@@ -150,7 +142,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
-                    android:background="@color/admin_home_btn_strock" />
+                    android:background="@color/home_btn_strock" />
 
 
                 <include layout="@layout/admin_daily_layout" />
