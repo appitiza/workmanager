@@ -44,6 +44,7 @@ To start with, you need to install Nodejs on your local system. With help of nod
 
 I have added the cloud function code in firebasefunction folder please have a look.
 
+[In a similar fashion, you can host your admin website in Firebase Hosting section(Iwill be updating same)]
 
 ### Note:
 `google-services.json` added in this project will connect your app to my firebase account.You need to replace it with yours .
