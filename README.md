@@ -46,9 +46,9 @@ I have added the cloud function code in firebasefunction folder please have a lo
 
 
 ### Note:
-`google-services.json` added in this project will connect you app to my firebase account.You need to replace it with yours .
+`google-services.json` added in this project will connect your app to my firebase account.You need to replace it with yours .
 
-As i said above,Firestore is in beta so there are possibilities of change.I will be updating them.
+As i said above,Firestore is in beta so there are possibilities of change. I will be updating them.
 
 Methods associated with push notification is only tested in Windows system.
 
