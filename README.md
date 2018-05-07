@@ -56,10 +56,9 @@ Methods associated with push notification is only tested in Windows system.
 
 ## ScreenShot
 
-![Alt Text](https://github.com/appitiza/SignatureApp/blob/master/images/drawing.gif)
-![Alt Text](https://github.com/appitiza/SignatureApp/blob/master/images/signature.gif)
+Not yet complete....
 
-[Demo Download](https://github.com/appitiza/SignatureApp/blob/master/apk/signatureapp.apk)
+[Demo Download](https://github.com/appitiza/workmanager/app/release/app-release.apk)
 
 ## License
 
