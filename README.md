@@ -21,14 +21,14 @@ In Firebase there are mainly two main database concepts. One is [Real-time datab
 ### Project creation in firebase
 **Sptep 1.** Create a project in Firebase [Link](https://firebase.google.com/docs/firestore/quickstart")
 
-**Sptep 2.** Provide  details like Packagename,SHA1 etc to configure
+**Sptep 2.** Provide  details like Package name,SHA1 etc to configure
 
-**Sptep 2.** On completing step2,a file named `google-services.json`.Download this file and add to the app folder.With this process your done with configuring firebase.
+**Sptep 2.** On completing step2,a file named `google-services.json`.Download this file and add to the app folder. With this process, you are done with configuration.
 
 ### Push Notification in serverless application
 
-Since we don't have a server to handle push notification, We are going to develop a cloud function and host them in Googe cloud functions.On hosting you can view them on your firebase console.
-To start with,you need to install Nodejs in your local system.With help of nodejs framework and firebase tool, you need to create a cloud function.On completeing this process you can upload it on to firebase cloud function.I have kept everything simple in here.The logic is quite simple, We have a collection(For the time being let us assume collection to be a table) named Notification.Whenever there is an entry in notification collection, we need to trigger our cloud function.This cloud function will send the push notification.
+Since we don't have a server to handle push notification, We are going to develop a cloud function and host them in Googe cloud functions. On hosting you can view them on your firebase console.
+To start with, you need to install Nodejs on your local system. With help of nodejs framework and firebase tool, you need to create a cloud function. On completing this process you can upload it on to firebase cloud function. I have kept everything simple in here. The logic is quite simple, We have a collection(For the time being let us assume collection to be a table) named Notification. Whenever there is an entry in notification collection, we need to trigger our cloud function. This cloud function will send the push notification.
 
 **Step 1.** Install node.js in your local system [ Click Here to download Nodejs](https://nodejs.org/en/") 
 
