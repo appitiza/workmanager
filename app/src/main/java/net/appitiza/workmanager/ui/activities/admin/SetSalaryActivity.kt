@@ -2,6 +2,7 @@ package net.appitiza.workmanager.ui.activities.admin
 
 import android.app.ProgressDialog
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import android.text.TextUtils
 import android.view.View
 import android.widget.AdapterView
@@ -9,7 +10,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import kotlinx.android.synthetic.main.activity_set_salary.*
+import kotlinx.android.synthetic.main.item_toolbar.*
 import net.appitiza.workmanager.R
+import net.appitiza.workmanager.R.layout.item_toolbar
 import net.appitiza.workmanager.constants.Constants
 import net.appitiza.workmanager.ui.activities.BaseActivity
 import net.appitiza.workmanager.adapter.AdminSpnrUserAdapter
@@ -34,9 +37,23 @@ class SetSalaryActivity : BaseActivity(), UserClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_set_salary)
+        setActionbar()
         initializeFireBase()
         getUser()
         setClick()
+    }
+
+    private fun setActionbar() {
+       val mToolbar = item_toolbar as Toolbar
+
+        setSupportActionBar(mToolbar);
+        if (getSupportActionBar() != null) {
+            tv_title.text = getString(R.string.set_salary)
+
+            supportActionBar?.setHomeButtonEnabled(true)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
+        mToolbar.setNavigationOnClickListener { onBackPressed() }
     }
 
     private fun initializeFireBase() {

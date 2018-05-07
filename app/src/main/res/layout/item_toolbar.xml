@@ -12,12 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/iv_filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/app_name" />
+
 
         <TextView
             android:id="@+id/tv_title"
@@ -26,9 +21,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/default_padding"
             android:layout_marginStart="@dimen/default_padding"
-            android:layout_toEndOf="@+id/iv_filter"
             android:layout_toLeftOf="@+id/tv_name"
-            android:layout_toRightOf="@+id/iv_filter"
             android:layout_toStartOf="@+id/tv_name"
             android:fontFamily="@font/helvatica"
             android:textColor="@android:color/white"
