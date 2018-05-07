@@ -58,7 +58,7 @@ Methods associated with push notification is only tested in Windows system.
 
 Not yet complete....
 
-[Demo Download](https://github.com/appitiza/workmanager/app/release/app-release.apk)
+[Demo Download](https://github.com/appitiza/workmanager/tree/master/app/release/app-release.apk)
 
 ## License
 
