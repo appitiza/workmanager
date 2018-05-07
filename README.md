@@ -1,9 +1,9 @@
-# "WorkManager" a serverless android application using Kotlin and firestore
+# "WorkManager" a serverless android application using Kotlin and Firestore
 
-WorkManager is a server less android application where data is saved in firestore.We will be creating a cloud funtion to send push notification.You can use this application as a reference for implementing Frestore.
+WorkManager is a serverless android application where data is saved in Firestore. We will be creating a cloud function to send the push notification. You can use this application as a reference for implementing Firestore.
 
 ## Prerequisite
-To continue,you need some basic idea about Kotlin and Firestore.
+To continue, you need to have a  basic idea on Kotlin and Firestore.
 
 Here is a video on Kotlin
 
@@ -14,8 +14,8 @@ Here is a video on Kotlin
 [Click Here to know more about Firestore](https://firebase.google.com/docs/firestore/quickstart")
 
 ## Getting Started
-In Firebase there are mainly two main database concepts.One is [Realtime database](https://firebase.google.com/docs/database/")  and the other one is [Firestore](https://firebase.google.com/docs/firestore/").Firestore is in beta mode,which means code can change.In this application,We are concentrating on Firestore.
-[Click Here to know more about the deference between Realtime database and Firestore](https://firebase.google.com/docs/database/rtdb-vs-firestore")
+In Firebase there are mainly two main database concepts. One is [Real-time database](https://firebase.google.com/docs/database/")  and the other one is [Firestore](https://firebase.google.com/docs/firestore/").Firestore is in beta mode, which means code can change. In this application, We are concentrating on Firestore.
+[Click Here to know more about the differences between Real-time database and Firestore](https://firebase.google.com/docs/database/rtdb-vs-firestore")
 
 
 ### Project creation in firebase
@@ -27,7 +27,7 @@ In Firebase there are mainly two main database concepts.One is [Realtime databas
 
 ### Push Notification in serverless application
 
-Since we don't have a serverto handle push notification, We are going to develop a cloud function and host them in Googe cloud functions.On hosting you can view them on your firebase console.
+Since we don't have a server to handle push notification, We are going to develop a cloud function and host them in Googe cloud functions.On hosting you can view them on your firebase console.
 To start with,you need to install Nodejs in your local system.With help of nodejs framework and firebase tool, you need to create a cloud function.On completeing this process you can upload it on to firebase cloud function.I have kept everything simple in here.The logic is quite simple, We have a collection(For the time being let us assume collection to be a table) named Notification.Whenever there is an entry in notification collection, we need to trigger our cloud function.This cloud function will send the push notification.
 
 **Step 1.** Install node.js in your local system [ Click Here to download Nodejs](https://nodejs.org/en/") 
@@ -46,7 +46,7 @@ I have added the cloud function code in firebasefunction folder please have a lo
 
 
 ### Note:
-I have removed `google-services.json` file from this project.You need to include it.
+`google-services.json` added in this project will connect you app to my firebase account.You need to replace it with yours .
 
 As i said above,Firestore is in beta so there are possibilities of change.I will be updating them.
 
