@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.Toolbar
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
@@ -15,6 +16,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_admin_work_reports.*
 import kotlinx.android.synthetic.main.admin_daily_layout.*
 import kotlinx.android.synthetic.main.admin_monthly_layout.*
+import kotlinx.android.synthetic.main.item_toolbar.*
 import net.appitiza.workmanager.R
 import net.appitiza.workmanager.constants.Constants
 import net.appitiza.workmanager.ui.activities.BaseActivity
@@ -65,11 +67,24 @@ class AdminWorkReportsActivity : BaseActivity(), UserClick,AdminWorkHistoryClick
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_work_reports)
+        setActionbar()
         initializeFireBase()
         getUser()
         setClick()
     }
+    private fun setActionbar() {
 
+        val toolbar: Toolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
+
+        if (getSupportActionBar() != null) {
+            tv_title.text = getString(R.string.set_salary)
+
+            supportActionBar?.setHomeButtonEnabled(true)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
+        toolbar.setNavigationOnClickListener { onBackPressed() }
+    }
     private fun initializeFireBase() {
         mUserList = arrayListOf()
         rv_adminhistory_list.layoutManager = LinearLayoutManager(this)

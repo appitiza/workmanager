@@ -3,9 +3,11 @@ package net.appitiza.workmanager.ui.activities.admin
 import android.app.ProgressDialog
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.Toolbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.*
 import kotlinx.android.synthetic.main.activity_usel_list.*
+import kotlinx.android.synthetic.main.item_toolbar.*
 import net.appitiza.workmanager.R
 import net.appitiza.workmanager.adapter.ChatUserAdapter
 import net.appitiza.workmanager.constants.Constants
@@ -35,10 +37,23 @@ class UserListActivity : BaseActivity(), ChatUserClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_usel_list)
+        setActionbar()
         initializeFireBase()
         getUser()
     }
+    private fun setActionbar() {
 
+        val toolbar: Toolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
+
+        if (getSupportActionBar() != null) {
+            tv_title.text = getString(R.string.set_salary)
+
+            supportActionBar?.setHomeButtonEnabled(true)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
+        toolbar.setNavigationOnClickListener { onBackPressed() }
+    }
     private fun initializeFireBase() {
 
 

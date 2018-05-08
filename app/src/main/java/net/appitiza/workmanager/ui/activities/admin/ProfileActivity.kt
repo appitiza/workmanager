@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import android.text.TextUtils
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -17,6 +18,7 @@ import com.google.firebase.storage.StorageReference
 import com.theartofdev.edmodo.cropper.CropImage
 import id.zelory.compressor.Compressor
 import kotlinx.android.synthetic.main.activity_profile.*
+import kotlinx.android.synthetic.main.item_toolbar.*
 import net.appitiza.workmanager.R
 import net.appitiza.workmanager.constants.Constants
 import net.appitiza.workmanager.ui.activities.BaseActivity
@@ -55,11 +57,24 @@ class ProfileActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+        setActionbar()
         initialize()
         getUserData()
         setClick()
     }
+    private fun setActionbar() {
 
+        val toolbar: Toolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
+
+        if (getSupportActionBar() != null) {
+            tv_title.text = getString(R.string.set_salary)
+
+            supportActionBar?.setHomeButtonEnabled(true)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
+        toolbar.setNavigationOnClickListener { onBackPressed() }
+    }
     private fun setClick() {
         iv_userprofile_image.setOnClickListener {
             openFile()

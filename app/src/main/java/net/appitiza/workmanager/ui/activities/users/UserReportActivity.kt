@@ -15,6 +15,7 @@ import android.os.Bundle
 import android.provider.Settings
 import android.support.design.widget.Snackbar
 import android.support.v4.app.ActivityCompat
+import android.support.v7.widget.Toolbar
 import android.telephony.TelephonyManager
 import android.text.TextUtils
 import android.util.Log
@@ -33,6 +34,7 @@ import com.google.firebase.firestore.SetOptions
 import kotlinx.android.synthetic.main.activity_admin_sites.*
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_user_report.*
+import kotlinx.android.synthetic.main.item_toolbar.*
 import net.appitiza.workmanager.BuildConfig
 import net.appitiza.workmanager.R
 import net.appitiza.workmanager.R.id.tv_user_report_checkin
@@ -85,12 +87,25 @@ class UserReportActivity : BaseActivity(), UserSiteClick, GoogleApiClient.Connec
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_report)
+        setActionbar()
         initializeFireBase()
         getSites()
         getCheckInInfo()
         setClick()
     }
+    private fun setActionbar() {
 
+        val toolbar: Toolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
+
+        if (getSupportActionBar() != null) {
+            tv_title.text = getString(R.string.set_salary)
+
+            supportActionBar?.setHomeButtonEnabled(true)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
+        toolbar.setNavigationOnClickListener { onBackPressed() }
+    }
     private fun initializeFireBase() {
 
         mSiteList = arrayListOf()

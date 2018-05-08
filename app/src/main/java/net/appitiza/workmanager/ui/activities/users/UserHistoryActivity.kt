@@ -5,12 +5,14 @@ import android.app.ProgressDialog
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.Toolbar
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_user_history.*
+import kotlinx.android.synthetic.main.item_toolbar.*
 import kotlinx.android.synthetic.main.users_daily_layout.*
 import kotlinx.android.synthetic.main.users_monthly_layout.*
 import net.appitiza.workmanager.R
@@ -42,11 +44,24 @@ class UserHistoryActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_history)
+        setActionbar()
         initialize()
         setClick()
         loadDaily()
     }
+    private fun setActionbar() {
 
+        val toolbar: Toolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
+
+        if (getSupportActionBar() != null) {
+            tv_title.text = getString(R.string.set_salary)
+
+            supportActionBar?.setHomeButtonEnabled(true)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
+        toolbar.setNavigationOnClickListener { onBackPressed() }
+    }
     private fun initialize() {
         rv_history_list.layoutManager = LinearLayoutManager(this)
         mHistoryDisplay = arrayListOf()

@@ -1,466 +1,512 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
+    android:background="@drawable/container_bg"
     android:transitionName="@string/transition_login_main">
 
-
-        <include layout="@layout/item_toolbar" />
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="80"
-        android:background="@drawable/container_bg">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/semi_padding">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/semi_padding">
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_admin_image"
+                android:layout_width="@dimen/small_image_size"
+                android:layout_height="@dimen/small_image_size"
+                android:layout_gravity="center"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_image" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2">
+                android:layout_gravity="center_vertical|left|start"
+                android:gravity="left|start"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/ll_admin_home_sites"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                <TextView
+                    android:id="@+id/tv_admin_displayname"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/quad_margin"
-                    android:layout_marginStart="@dimen/quad_margin"
-                    android:layout_marginTop="@dimen/default_margin"
-                    android:background="@drawable/admin_home_btn_bg"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/semi_padding">
+                    android:layout_gravity="center_vertical|left|start"
+                    android:textColor="@color/white"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/text_size_large" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/semi_padding"
-                        android:src="@drawable/website_home" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/quad_margin"
-                        android:layout_marginStart="@dimen/quad_margin"
-                        android:background="@color/white" />
-
-                    <TextView
-                        android:id="@+id/tv_admin_home_sites"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/default_margin"
-                        android:layout_marginStart="@dimen/default_margin"
-                        android:fontFamily="@font/roboto"
-                        android:gravity="center_vertical|left"
-                        android:text="@string/sites"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:transitionName="@string/transition_adminhome_sites" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ll_admin_home_wrk_reports"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                <TextView
+                    android:id="@+id/tv_admin_email"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/quad_margin"
-                    android:layout_marginStart="@dimen/quad_margin"
-                    android:layout_marginTop="@dimen/default_margin"
-                    android:background="@drawable/admin_home_btn_bg"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/semi_padding">
+                    android:layout_gravity="center_vertical|left|start"
+                    android:layout_marginTop="@dimen/semi_margin"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/text_size_medium" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/semi_padding"
-                        android:src="@drawable/report" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/quad_margin"
-                        android:layout_marginStart="@dimen/quad_margin"
-                        android:background="@color/white" />
-
-                    <TextView
-                        android:id="@+id/tv_admin_home_wrk_reports"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/default_margin"
-                        android:layout_marginStart="@dimen/default_margin"
-                        android:fontFamily="@font/roboto"
-                        android:gravity="center_vertical|left|start"
-                        android:text="@string/work_reports"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:transitionName="@string/transition_adminhome_wrkreport" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_admin_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left|start"
+                    android:textColor="@color/white"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/text_size_medium" />
 
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <LinearLayout
-                    android:id="@+id/ll_admin_home_site_reports"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/quad_margin"
-                    android:layout_marginStart="@dimen/quad_margin"
-                    android:layout_marginTop="@dimen/default_margin"
-                    android:background="@drawable/admin_home_btn_bg"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/semi_padding">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/semi_padding"
-                        android:src="@drawable/history" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/quad_margin"
-                        android:layout_marginStart="@dimen/quad_margin"
-                        android:background="@color/white" />
-
-                    <TextView
-                        android:id="@+id/tv_admin_home_site_reports"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/default_margin"
-                        android:layout_marginStart="@dimen/default_margin"
-                        android:fontFamily="@font/roboto"
-                        android:gravity="center_vertical|left|start"
-                        android:text="@string/site_reports"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:transitionName="@string/transition_adminhome_sitesreprt" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ll_admin_home_site_notification"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/quad_margin"
-                    android:layout_marginStart="@dimen/quad_margin"
-                    android:layout_marginTop="@dimen/default_margin"
-                    android:background="@drawable/admin_home_btn_bg"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/semi_padding">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/semi_padding"
-                        android:src="@drawable/notification" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/quad_margin"
-                        android:layout_marginStart="@dimen/quad_margin"
-                        android:background="@color/white" />
-
-                    <TextView
-                        android:id="@+id/tv_admin_home_site_notification"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/default_margin"
-                        android:layout_marginStart="@dimen/default_margin"
-                        android:fontFamily="@font/roboto"
-                        android:gravity="center_vertical|left|start"
-                        android:text="@string/notification"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:transitionName="@string/txt_adminhome_notification" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <LinearLayout
-                    android:id="@+id/ll_admin_home_site_chat"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/quad_margin"
-                    android:layout_marginStart="@dimen/quad_margin"
-                    android:layout_marginTop="@dimen/default_margin"
-                    android:background="@drawable/admin_home_btn_bg"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/semi_padding">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/semi_padding"
-                        android:src="@drawable/chat" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/quad_margin"
-                        android:layout_marginStart="@dimen/quad_margin"
-                        android:background="@color/white" />
-
-                    <TextView
-                        android:id="@+id/tv_admin_home_site_chat"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/default_margin"
-                        android:layout_marginStart="@dimen/default_margin"
-                        android:fontFamily="@font/roboto"
-                        android:gravity="center_vertical|left|start"
-                        android:text="@string/chat"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:transitionName="@string/txt_adminhome_notification" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ll_admin_home_site_salary"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/quad_margin"
-                    android:layout_marginStart="@dimen/quad_margin"
-                    android:layout_marginTop="@dimen/default_margin"
-                    android:background="@drawable/admin_home_btn_bg"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/semi_padding">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/semi_padding"
-                        android:src="@drawable/envelope" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/quad_margin"
-                        android:layout_marginStart="@dimen/quad_margin"
-                        android:background="@color/white" />
-
-                    <TextView
-                        android:id="@+id/tv_admin_home_site_salary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/default_margin"
-                        android:layout_marginStart="@dimen/default_margin"
-                        android:fontFamily="@font/roboto"
-                        android:gravity="center_vertical|left|start"
-                        android:text="@string/set_salary"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:transitionName="@string/txt_adminhome_salary" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <LinearLayout
-                    android:id="@+id/ll_admin_home_site_adjust_time"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/quad_margin"
-                    android:layout_marginStart="@dimen/quad_margin"
-                    android:layout_marginTop="@dimen/default_margin"
-                    android:background="@drawable/admin_home_btn_bg"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/semi_padding">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/semi_padding"
-                        android:src="@drawable/stopwatch" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/quad_margin"
-                        android:layout_marginStart="@dimen/quad_margin"
-                        android:background="@color/white" />
-
-                    <TextView
-                        android:id="@+id/tv_admin_home_site_adjust_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/default_margin"
-                        android:layout_marginStart="@dimen/default_margin"
-                        android:fontFamily="@font/roboto"
-                        android:gravity="center_vertical|left|start"
-                        android:text="@string/adjust_time"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:transitionName="@string/txt_adminhome_adjust_time" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ll_admin_home_site_device"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/quad_margin"
-                    android:layout_marginStart="@dimen/quad_margin"
-                    android:layout_marginTop="@dimen/default_margin"
-                    android:background="@drawable/admin_home_btn_bg"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/semi_padding">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/semi_padding"
-                        android:src="@drawable/settings" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/quad_margin"
-                        android:layout_marginStart="@dimen/quad_margin"
-                        android:background="@color/white" />
-
-                    <TextView
-                        android:id="@+id/tv_admin_home_site_device"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/default_margin"
-                        android:layout_marginStart="@dimen/default_margin"
-                        android:fontFamily="@font/roboto"
-                        android:gravity="center_vertical|left|start"
-                        android:text="@string/device_reset"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:transitionName="@string/txt_adminhome_device" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <LinearLayout
-                    android:id="@+id/ll_admin_home_change_device_resquests"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/quad_margin"
-                    android:layout_marginStart="@dimen/quad_margin"
-                    android:layout_marginTop="@dimen/default_margin"
-                    android:background="@drawable/admin_home_btn_bg"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/semi_padding">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:contentDescription="@string/app_name"
-                        android:padding="@dimen/semi_padding"
-                        android:src="@drawable/settings" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/quad_margin"
-                        android:layout_marginStart="@dimen/quad_margin"
-                        android:background="@color/white" />
-
-                    <TextView
-                        android:id="@+id/tv_admin_home_change_device_resquests"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/default_margin"
-                        android:layout_marginStart="@dimen/default_margin"
-                        android:fontFamily="@font/roboto"
-                        android:gravity="center_vertical|left|start"
-                        android:text="@string/admin_change_device"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/text_size_medium"
-                        android:transitionName="@string/txt_adminhome_device_change_request" />
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/ll_admin_home_profile"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/quad_margin"
-                    android:layout_marginStart="@dimen/quad_margin"
-                    android:layout_marginTop="@dimen/default_margin"
-                    android:background="@drawable/admin_home_btn_bg"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/semi_padding">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:contentDescription="@string/app_name"
-                        android:padding="@dimen/semi_padding"
-                        android:src="@drawable/user" />
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/quad_margin"
-                        android:layout_marginStart="@dimen/quad_margin"
-                        android:background="@color/white" />
-
-                    <TextView
-                        android:id="@+id/tv_admin_home_profile"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="@dimen/default_margin"
-                        android:layout_marginStart="@dimen/default_margin"
-                        android:fontFamily="@font/roboto"
-                        android:gravity="center_vertical|left|start"
-                        android:text="@string/admin_profile"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/text_size_medium"
-                        android:transitionName="@string/txt_adminhome_device_change_request" />
-                </LinearLayout>
-            </LinearLayout>
-
-
 
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/ll_admin_home_sites"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quad_margin"
+                android:layout_marginStart="@dimen/quad_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_weight="1"
+                android:background="@drawable/admin_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/semi_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/semi_padding"
+                    android:src="@drawable/website_home" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/quad_margin"
+                    android:layout_marginStart="@dimen/quad_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_admin_home_sites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/sites"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/transition_adminhome_sites" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_admin_home_wrk_reports"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quad_margin"
+                android:layout_marginStart="@dimen/quad_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_weight="1"
+                android:background="@drawable/admin_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/semi_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/semi_padding"
+                    android:src="@drawable/report" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/quad_margin"
+                    android:layout_marginStart="@dimen/quad_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_admin_home_wrk_reports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical|left|start"
+                    android:text="@string/work_reports"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/transition_adminhome_wrkreport" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/ll_admin_home_site_reports"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quad_margin"
+                android:layout_marginStart="@dimen/quad_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_weight="1"
+                android:background="@drawable/admin_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/semi_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/semi_padding"
+                    android:src="@drawable/history" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/quad_margin"
+                    android:layout_marginStart="@dimen/quad_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_admin_home_site_reports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical|left|start"
+                    android:text="@string/site_reports"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/transition_adminhome_sitesreprt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_admin_home_site_notification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quad_margin"
+                android:layout_marginStart="@dimen/quad_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_weight="1"
+                android:background="@drawable/admin_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/semi_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/semi_padding"
+                    android:src="@drawable/notification" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/quad_margin"
+                    android:layout_marginStart="@dimen/quad_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_admin_home_site_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical|left|start"
+                    android:text="@string/notification"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/txt_adminhome_notification" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/ll_admin_home_site_chat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quad_margin"
+                android:layout_marginStart="@dimen/quad_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_weight="1"
+                android:background="@drawable/admin_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/semi_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/semi_padding"
+                    android:src="@drawable/chat" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/quad_margin"
+                    android:layout_marginStart="@dimen/quad_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_admin_home_site_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical|left|start"
+                    android:text="@string/chat"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/txt_adminhome_notification" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_admin_home_site_salary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quad_margin"
+                android:layout_marginStart="@dimen/quad_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_weight="1"
+                android:background="@drawable/admin_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/semi_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/semi_padding"
+                    android:src="@drawable/envelope" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/quad_margin"
+                    android:layout_marginStart="@dimen/quad_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_admin_home_site_salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical|left|start"
+                    android:text="@string/set_salary"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/txt_adminhome_salary" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/ll_admin_home_site_adjust_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quad_margin"
+                android:layout_marginStart="@dimen/quad_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_weight="1"
+                android:background="@drawable/admin_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/semi_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/semi_padding"
+                    android:src="@drawable/stopwatch" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/quad_margin"
+                    android:layout_marginStart="@dimen/quad_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_admin_home_site_adjust_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical|left|start"
+                    android:text="@string/adjust_time"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/txt_adminhome_adjust_time" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_admin_home_site_device"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quad_margin"
+                android:layout_marginStart="@dimen/quad_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_weight="1"
+                android:background="@drawable/admin_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/semi_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/semi_padding"
+                    android:src="@drawable/settings" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/quad_margin"
+                    android:layout_marginStart="@dimen/quad_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_admin_home_site_device"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical|left|start"
+                    android:text="@string/device_reset"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:transitionName="@string/txt_adminhome_device" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/ll_admin_home_change_device_resquests"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quad_margin"
+                android:layout_marginStart="@dimen/quad_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_weight="1"
+                android:background="@drawable/admin_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/semi_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/semi_padding"
+                    android:src="@drawable/settings" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/quad_margin"
+                    android:layout_marginStart="@dimen/quad_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_admin_home_change_device_resquests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical|left|start"
+                    android:text="@string/admin_change_device"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_medium"
+                    android:transitionName="@string/txt_adminhome_device_change_request" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_admin_home_profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/quad_margin"
+                android:layout_marginStart="@dimen/quad_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_weight="1"
+                android:background="@drawable/admin_home_btn_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/semi_padding">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/semi_padding"
+                    android:src="@drawable/user" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/quad_margin"
+                    android:layout_marginStart="@dimen/quad_margin"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_admin_home_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center_vertical|left|start"
+                    android:text="@string/admin_profile"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_medium"
+                    android:transitionName="@string/txt_adminhome_device_change_request" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

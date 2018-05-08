@@ -1,30 +1,82 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:transitionName="@string/transition_login_main">
 
-    <include layout="@layout/item_toolbar" />
 
-    <ScrollView
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="65"
-        android:background="@drawable/container_bg">
+        android:layout_height="match_parent"
+        android:background="@drawable/container_bg"
+        android:transitionName="@string/transition_login_main">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:padding="@dimen/double_margin">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/default_margin">
 
+                <ImageView
+                    android:id="@+id/iv_user_image"
+                    android:layout_width="@dimen/small_image_size"
+                    android:layout_height="@dimen/small_image_size"
+                    android:layout_gravity="center"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/no_image" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left|start"
+                    android:gravity="left|start"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_user_displayname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left|start"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/text_size_large" />
+
+                    <TextView
+                        android:id="@+id/tv_user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left|start"
+                        android:layout_marginTop="@dimen/semi_margin"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <TextView
+                        android:id="@+id/tv_user_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left|start"
+                        android:textColor="@color/white"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/text_size_medium" />
+
+                </LinearLayout>
+
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/ll_users_home_report"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/home_btn_bg"
                 android:orientation="horizontal"
+                android:layout_marginTop="@dimen/default_margin"
                 android:padding="@dimen/default_margin">
 
                 <ImageView
@@ -244,4 +296,3 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-</LinearLayout>

@@ -8,11 +8,15 @@ import android.support.v4.app.ActivityOptionsCompat
 import android.support.v4.util.Pair
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.request.RequestOptions
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.iid.FirebaseInstanceId
 import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_admin.*
+import kotlinx.android.synthetic.main.activity_profile.*
 import net.appitiza.workmanager.R
 import net.appitiza.workmanager.constants.Constants
 import net.appitiza.workmanager.ui.activities.StartUpActivity
@@ -25,11 +29,18 @@ class AdminActivity : AppCompatActivity() {
     private var useremail by PreferenceHelper(Constants.PREF_KEY_IS_USER_EMAIL, "")
     private var userpassword by PreferenceHelper(Constants.PREF_KEY_IS_USER_PASSWORD, "")
     private var usertype by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_TYPE, "")
+    private var userimei by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_IMEI, "")
+    private var userimage by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_IMAGE, "")
+    private var userthumb by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_THUMB, "")
+    private var userstatus by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_STATUS, "")
+    private var salary by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_SALARY, 0)
+
     private lateinit var db: FirebaseFirestore
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin)
         initialize()
+        getUserData()
         setclick()
     }
 
@@ -37,7 +48,19 @@ class AdminActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
         updateFcm()
     }
+    private fun getUserData() {
+        val requestOptions = RequestOptions()
+        requestOptions.placeholder(R.drawable.default_image)
+        requestOptions.error(R.drawable.default_image)
+        requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL)
+        requestOptions.circleCrop()
+        Glide.with(applicationContext).load(userimage).apply(requestOptions).into(iv_admin_image)
+        tv_admin_displayname.text = displayName
+        tv_admin_email.text = useremail
+        tv_admin_status.text = userstatus
 
+
+    }
     private fun setclick() {
         ll_admin_home_sites.setOnClickListener { loadSites() }
         ll_admin_home_site_reports.setOnClickListener { loadSitesReport() }

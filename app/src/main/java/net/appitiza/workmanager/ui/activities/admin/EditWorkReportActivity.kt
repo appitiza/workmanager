@@ -4,12 +4,14 @@ import android.app.DatePickerDialog
 import android.app.ProgressDialog
 import android.app.TimePickerDialog
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import android.text.TextUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import kotlinx.android.synthetic.main.activity_edit_work_report.*
 import kotlinx.android.synthetic.main.activity_set_time.*
+import kotlinx.android.synthetic.main.item_toolbar.*
 import net.appitiza.workmanager.R
 import net.appitiza.workmanager.adapter.AdminSpnrUserAdapter
 import net.appitiza.workmanager.adapter.AdminSprSiteAdapter
@@ -53,11 +55,24 @@ class EditWorkReportActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_work_report)
+        setActionbar()
         initializeFireBase()
         getUser()
         setClick()
     }
+    private fun setActionbar() {
 
+        val toolbar: Toolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
+
+        if (getSupportActionBar() != null) {
+            tv_title.text = getString(R.string.set_salary)
+
+            supportActionBar?.setHomeButtonEnabled(true)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
+        toolbar.setNavigationOnClickListener { onBackPressed() }
+    }
     private fun initializeFireBase() {
         mUserList = arrayListOf()
         mSiteList = arrayListOf()

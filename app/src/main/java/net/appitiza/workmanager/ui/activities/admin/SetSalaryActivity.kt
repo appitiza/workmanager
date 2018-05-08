@@ -12,12 +12,11 @@ import com.google.firebase.firestore.SetOptions
 import kotlinx.android.synthetic.main.activity_set_salary.*
 import kotlinx.android.synthetic.main.item_toolbar.*
 import net.appitiza.workmanager.R
-import net.appitiza.workmanager.R.layout.item_toolbar
-import net.appitiza.workmanager.constants.Constants
-import net.appitiza.workmanager.ui.activities.BaseActivity
 import net.appitiza.workmanager.adapter.AdminSpnrUserAdapter
-import net.appitiza.workmanager.ui.activities.interfaces.UserClick
+import net.appitiza.workmanager.constants.Constants
 import net.appitiza.workmanager.model.UserListdata
+import net.appitiza.workmanager.ui.activities.BaseActivity
+import net.appitiza.workmanager.ui.activities.interfaces.UserClick
 import net.appitiza.workmanager.utils.PreferenceHelper
 import net.appitiza.workmanager.utils.Utils
 import java.util.*
@@ -44,16 +43,17 @@ class SetSalaryActivity : BaseActivity(), UserClick {
     }
 
     private fun setActionbar() {
-       val mToolbar = item_toolbar as Toolbar
 
-        setSupportActionBar(mToolbar);
+        val toolbar: Toolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
+
         if (getSupportActionBar() != null) {
             tv_title.text = getString(R.string.set_salary)
 
             supportActionBar?.setHomeButtonEnabled(true)
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
-        mToolbar.setNavigationOnClickListener { onBackPressed() }
+        toolbar.setNavigationOnClickListener { onBackPressed() }
     }
 
     private fun initializeFireBase() {
@@ -93,7 +93,6 @@ class SetSalaryActivity : BaseActivity(), UserClick {
                     if (fetchall_task.isSuccessful) {
 
                         for (document in fetchall_task.result) {
-                            // Log.d(FragmentActivity.TAG, document.id + " => " + document.getData())
                             val data = UserListdata()
                             data.emailId = document.data[Constants.USER_EMAIL].toString()
                             data.username = document.data[Constants.USER_DISPLAY_NAME].toString()
@@ -156,6 +155,7 @@ class SetSalaryActivity : BaseActivity(), UserClick {
             true
         }
     }
+
     override fun onUserClick(data: UserListdata) {
 
     }

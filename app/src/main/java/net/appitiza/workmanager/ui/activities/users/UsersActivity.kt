@@ -15,11 +15,16 @@ import android.support.v4.app.ActivityOptionsCompat
 import android.support.v4.util.Pair
 import android.util.Log
 import android.view.View
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.request.RequestOptions
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.iid.FirebaseInstanceId
 import com.google.firebase.messaging.FirebaseMessaging
+import kotlinx.android.synthetic.main.activity_admin.*
 import kotlinx.android.synthetic.main.activity_admin_sites.*
+import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_users.*
 import net.appitiza.workmanager.BuildConfig
 import net.appitiza.workmanager.R
@@ -38,6 +43,11 @@ class UsersActivity : BaseActivity() {
     private var useremail by PreferenceHelper(Constants.PREF_KEY_IS_USER_EMAIL, "")
     private var userpassword by PreferenceHelper(Constants.PREF_KEY_IS_USER_PASSWORD, "")
     private var usertype by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_TYPE, "")
+    private var userimei by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_IMEI, "")
+    private var userimage by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_IMAGE, "")
+    private var userthumb by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_THUMB, "")
+    private var userstatus by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_STATUS, "")
+    private var salary by PreferenceHelper(Constants.PREF_KEY_IS_USER_USER_SALARY, 0)
 
     private val TAG = "LOCATION"
     private val REQUEST_PERMISSIONS_REQUEST_CODE = 34
@@ -46,6 +56,7 @@ class UsersActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_users)
         initialize()
+        getUserData()
         setClick()
         hideKeyboard()
 
@@ -55,7 +66,19 @@ class UsersActivity : BaseActivity() {
         db = FirebaseFirestore.getInstance()
         updateFcm()
     }
+    private fun getUserData() {
+        val requestOptions = RequestOptions()
+        requestOptions.placeholder(R.drawable.default_image)
+        requestOptions.error(R.drawable.default_image)
+        requestOptions.diskCacheStrategy(DiskCacheStrategy.ALL)
+        requestOptions.circleCrop()
+        Glide.with(applicationContext).load(userimage).apply(requestOptions).into(iv_user_image)
+        tv_user_displayname.text = displayName
+        tv_user_email.text = useremail
+        tv_user_status.text = userstatus
 
+
+    }
     fun setClick() {
         ll_users_home_report.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

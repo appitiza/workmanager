@@ -15,4 +15,5 @@
     <dimen name="text_size_medium">14dp</dimen>
     <dimen name="text_size_small">12dp</dimen>
     <dimen name="average_image_size">100dp</dimen>
+    <dimen name="small_image_size">75dp</dimen>
 </resources>

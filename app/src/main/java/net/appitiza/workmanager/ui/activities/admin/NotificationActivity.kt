@@ -2,6 +2,7 @@ package net.appitiza.workmanager.ui.activities.admin
 
 import android.app.ProgressDialog
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import android.text.TextUtils
 import android.view.View
 import android.widget.AdapterView
@@ -10,6 +11,7 @@ import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import kotlinx.android.synthetic.main.activity_notification.*
+import kotlinx.android.synthetic.main.item_toolbar.*
 import net.appitiza.workmanager.R
 import net.appitiza.workmanager.constants.Constants
 import net.appitiza.workmanager.ui.activities.BaseActivity
@@ -37,11 +39,24 @@ class NotificationActivity : BaseActivity(), UserClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notification)
+        setActionbar()
         initializeFireBase()
         getUser()
         setClick()
     }
+    private fun setActionbar() {
 
+        val toolbar: Toolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
+
+        if (getSupportActionBar() != null) {
+            tv_title.text = getString(R.string.set_salary)
+
+            supportActionBar?.setHomeButtonEnabled(true)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
+        toolbar.setNavigationOnClickListener { onBackPressed() }
+    }
     private fun initializeFireBase() {
         mUserList = arrayListOf()
         mProgress = ProgressDialog(this)
