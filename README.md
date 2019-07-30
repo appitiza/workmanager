@@ -19,7 +19,7 @@ In Firebase there are mainly two main database concepts. One is [Real-time datab
 
 
 ### Project creation in firebase
-**Sptep 1.** Create a project in Firebase [Link](https://firebase.google.com/docs/firestore/quickstart")
+**Sptep 1.** Create a project in Firebase [Link](https://firebase.google.com/docs/firestore/quickstart)
 
 **Sptep 2.** Provide  details like Package name,SHA1 etc to configure
 
